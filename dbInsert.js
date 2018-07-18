@@ -1,12 +1,12 @@
 function insertToDatabase(callback) {
-	const UsersCollection = usersDb.collection('Users');
+	const usersCollection = db.collection('Users');
 
-	UsersCollection.drop(function(err, delOK) {
+	usersCollection.drop(function(err, delOK) {
 		if (err) throw err;
 		if (delOK) console.log('Users collection dropped.');
 	});
 
-	UsersCollection.insertMany([
+	usersCollection.insertMany([
 		{
 			'username': 'milos.lazarevic',
 			'password': 'nobleant1',

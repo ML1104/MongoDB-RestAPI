@@ -1,5 +1,5 @@
 let usersCollection = {};
-const database = require('../usersDb').then(function(db) {
+const database = require('../Db').then(function(db) {
 	usersCollection = db.collection('Users');
 });
 
